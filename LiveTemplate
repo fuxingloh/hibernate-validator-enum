@@ -1,0 +1,34 @@
+$END$
+
+UNKNOWN_TO_SDK_VERSION(null);
+
+private final String value;
+
+$CLASS_NAME$(String value) {
+    this.value = value;
+}
+
+@Override
+@com.fasterxml.jackson.annotation.JsonValue
+public String toString() {
+    return String.valueOf(value);
+}
+
+/**
+ * Use this in place of valueOf to convert the raw string returned by the service into the enum value.
+ *
+ * @param value real value
+ * @return $CLASS_NAME$ corresponding to the value
+ */
+@com.fasterxml.jackson.annotation.JsonCreator
+public static $CLASS_NAME$ fromValue(String value) {
+    if (value == null) {
+        return null;
+    }
+    return java.util.stream.Stream.of($CLASS_NAME$.values()).filter(e -> e.toString().equals(value)).findFirst()
+            .orElse(UNKNOWN_TO_SDK_VERSION);
+}
+
+public static java.util.Set<$CLASS_NAME$> knownValues() {
+    return java.util.stream.Stream.of(values()).filter(v -> v != UNKNOWN_TO_SDK_VERSION).collect(java.util.stream.Collectors.toSet());
+}
