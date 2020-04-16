@@ -18,11 +18,11 @@ I have also created @ValidEnum constraints to support using Hibernate Validator 
 <dependency>
   <groupId>dev.fuxing</groupId>
   <artifactId>hibernate-validator-enum</artifactId>
-  <version>0.1.0</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 
 ### Gradle
 ```groovy
-compile group: 'dev.fuxing', name: 'hibernate-validator-enum', version: '0.1.0'
+compile group: 'dev.fuxing', name: 'hibernate-validator-enum', version: '1.0.0'
 ```
